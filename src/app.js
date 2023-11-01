@@ -5,18 +5,18 @@ class Blog {
     this.detail = detail;
   }
   addTitle() {
-    var title_card = document.createElement('h1');
-    title_card.setAttribute('id', 'blog-title');
-    console.log(title_card);
-    document.getElementById('card-text').appendChild(title_card);
-    title_card.innerHTML += this.title;
+    var titleOfTheCard = document.createElement('h1');
+    titleOfTheCard.setAttribute('id', 'blog-title');
+    console.log(titleOfTheCard);
+    document.getElementById('card-text').appendChild(titleOfTheCard);
+    titleOfTheCard.innerHTML += this.title;
   }
   addDescription() {
-    var descriptionOfCard = document.createElement('h3');
-    descriptionOfCard.setAttribute('id', 'blog-description');
-    console.log(descriptionOfCard);
-    document.getElementById('card-text').appendChild(descriptionOfCard);
-    descriptionOfCard.innerHTML += this.detail;
+    var descriptionOfTheCard = document.createElement('h5');
+    descriptionOfTheCard.setAttribute('id', 'blog-description');
+    console.log(descriptionOfTheCard);
+    document.getElementById('card-text').appendChild(descriptionOfTheCard);
+    descriptionOfTheCard.innerHTML += this.detail;
   }
 }
 
@@ -32,7 +32,6 @@ function helperAddPost() {
   }
 }
 
-// Function to add a new post and display it
 let x;
 function helperAddPost() {
   if (x !== 1) {
@@ -47,7 +46,7 @@ function helperAddPost() {
 function helperPost() {
   const x = document.getElementById('title').value;
   const y = document.getElementById('detail').value;
-  const blog = new Blog(x, y);
-  blog.addTitle();
-  blog.addDescription();
+  const z = new Blog(x, y);
+  z.addTitle();
+  z.addDescription();
 }
